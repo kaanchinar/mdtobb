@@ -1,17 +1,8 @@
 # Markdown to Bulletin Board Code converter
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Contributing](#contributing)
-
-<a id="introduction"></a>
-
 ## Introduction
 
 Basic Markdown to Bulletin Board Code converter with Xenforo flavor.
-<a id="installation"></a>
 
 ## Installation
 
@@ -21,8 +12,6 @@ To test on your local, just install the dependecies. And run your project!
 pnpm install 
 pnpm run dev
 ```
-
-<a id="contributing"></a>
 
 ## Contributing
 

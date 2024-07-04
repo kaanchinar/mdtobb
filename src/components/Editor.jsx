@@ -15,7 +15,7 @@ function Editor() {
     <div className="w-1/2 border-r-4 px-2 mx-2">
       <AceEditor
         
-        placeholder="Placeholder Text"
+        placeholder="Enter your markdown here..."
         mode="markdown"
         theme="github"
         name="Editor"
