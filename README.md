@@ -1,8 +1,29 @@
-# React + Vite
+# Markdown to Bulletin Board Code converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Contents
 
-Currently, two official plugins are available:
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Contributing](#contributing)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<a id="introduction"></a>
+
+## Introduction
+
+Basic Markdown to Bulletin Board Code converter with Xenforo flavor.
+<a id="installation"></a>
+
+## Installation
+
+To test on your local, just install the dependecies. And run your project!
+
+```bash
+pnpm install 
+pnpm run dev
+```
+
+<a id="contributing"></a>
+
+## Contributing
+
+To contribute project, you can share bugs/errors at [Issues](https://github.com/kaanchinar/mdtobb/issues) or with [pull requests](https://github.com/kaanchinar/mdtobb/pulls).
