@@ -34,6 +34,7 @@ function Preview() {
   const converter = (input) => {
     input = input.replace(/<strong>*(.*?)<\/strong>/g, "[b]$1[/b]");
     input = input.replace(/<em>*(.*?)<\/em>/g, "[i]$1[/i]");
+    input = input.replace(/<ins>*(.*?)<\/ins>/g, "[u]$1[/u]");
     input = input.replace(/<h2>*(.*?)<\/h2>/g, "[heading=1]$1[/heading]");
     input = input.replace(/<h3>*(.*?)<\/h3>/g, "[heading=2]$1[/heading]");
     input = input.replace(/<h4>*(.*?)<\/h4>/g, "[heading=3]$1[/heading]");
