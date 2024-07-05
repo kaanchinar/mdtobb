@@ -11,23 +11,28 @@ function Preview() {
 
   function convertLists(input) {
     const convertListItems = (text) => {
-      return text.replace(/<li>([\s\S]*?)<\/li>/g, (match, content) => {
-        const processedContent = convertLists(content);
-        return `[*]${processedContent}`;
-      });
+      while (text.includes("<li>")) {
+        text = text.replace(/(<li>)(?![\s\S]*\1)([\s\S]*?)<\/li>/g, (match, ...groups) => {
+          const processedContent = convertLists(groups[1]);
+          return `[*]${processedContent}`;
+        });
+      }
+      return text;
     };
-
+  
     const convertListsUnified = (text) => {
-      return text.replace(
-        /<(ul|ol)>([\s\S]*?)<\/\1>/g,
-        (match, listType, content) => {
+      while (text.includes("<ul>") || text.includes("<ol>")) {
+        text = text.replace(/(<(ul|ol)>)(?![\s\S]*\1)([\s\S]*?)<\/\2>/g, (match, ...groups) => {
+          const listType = groups[1];
+          const content = groups[2];
           const processedContent = convertListItems(content);
           const bbCodeTag = listType === "ol" ? "[list=1]" : "[list]";
           return `${bbCodeTag}${processedContent}[/list]`;
-        }
-      );
+        });
+      }
+      return text;
     };
-
+  
     return convertListsUnified(input);
   }
 
