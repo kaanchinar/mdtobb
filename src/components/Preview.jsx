@@ -46,7 +46,7 @@ function Preview() {
     input = input.replace(/<code>*(.*?)<\/code>/g, "[icode]$1[/icode]");
     input = input.replace(
       /<pre><code class="language-(.*?)">(.*?)<\/code><\/pre>/gs,
-      (lang, code) => {
+      (code, lang) => {
         const trimmedCode = code.trim();
         return `[code=${lang}]${trimmedCode}[/code]`;
       }
